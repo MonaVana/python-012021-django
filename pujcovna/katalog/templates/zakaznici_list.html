@@ -1,0 +1,9 @@
+{% block content %}
+<h2>Seznam zákazníků</h2>
+<p>Kdo si u nás vypůjčil:</p>
+<ul>
+    {% for zakaznik in object_list %}
+    <li><a href="{% url 'zakaznik_detail' zakaznik.pk %}">{{ zakaznik.prijmeni }} {{ zakaznik.jmeno }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

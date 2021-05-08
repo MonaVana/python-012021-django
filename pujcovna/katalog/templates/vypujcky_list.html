@@ -1,0 +1,12 @@
+{% block content %}
+<h2>Seznam výpůjček</h2>
+<p>Tato auta jsou aktuálně vypůjčená:</p>
+<ul>
+    {% for vypujcka in object_list %}
+    <li><a href="{% url 'vypujcka_detail' vypujcka.pk %}">{{ vypujcka.auto }}, {{ vypujcka.zahajeni_vypujcky }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+<p></p>
+<a href="{% url 'index' %}">Návrat na hlavní stránku</a>

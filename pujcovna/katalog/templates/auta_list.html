@@ -1,0 +1,14 @@
+{% block content %}
+<h2>Seznam aut</h2>
+<p>Zde vidíte aktuální seznam aut k vypůjčení:</p>
+<table>
+    {% for auto in object_list %}
+    <tr>
+        <td><a href="{% url 'auta_list' %}">{{ auto.znacka_auta }}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
+<p></p>
+<a href="{% url 'index' %}">Návrat na hlavní stránku</a>

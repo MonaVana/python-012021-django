@@ -1,0 +1,12 @@
+<a href="{% url 'vypujcky_list' vypujcka.pk %}">Návrat na seznam výpůjček</a>
+
+<h3>Začátek výpůjčky</h3>
+{{ object.zahajeni_vypujcky }}
+<h3>Konec výpůjčky</h3>
+{{ object.konec_vypujcky }}
+<h3>Cena výpůjčky</h3>
+{{ object.cena }}
+<h3>Model auta</h3>
+{{ object.auto }}
+<h3>Jméno zákazníka</h3>
+{{ object.zakaznik }}
